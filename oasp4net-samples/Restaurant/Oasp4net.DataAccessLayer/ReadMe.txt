@@ -1,0 +1,1 @@
+﻿Folders inside assembly divide models into domains

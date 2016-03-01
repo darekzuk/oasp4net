@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C5AF18BB-C97E-4A9C-AD5A-F4A19E10B9DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oasp4net.BusinessLogicLayer</RootNamespace>
+    <AssemblyName>Oasp4net.BusinessLogicLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OfferManagement\Implementation\OfferManagement.cs" />
+    <Compile Include="OfferManagement\Implementation\UcFindOffer.cs" />
+    <Compile Include="OfferManagement\Implementation\UcFindProduct.cs" />
+    <Compile Include="OfferManagement\Implementation\UcFindSpecial.cs" />
+    <Compile Include="OfferManagement\Implementation\UcManageOffer.cs" />
+    <Compile Include="OfferManagement\Implementation\UcManagerProduct.cs" />
+    <Compile Include="OfferManagement\Implementation\UcManagerSpecial.cs" />
+    <Compile Include="OfferManagement\Interfaces\IOfferManagement.cs" />
+    <Compile Include="OfferManagement\Interfaces\IUcFindOffer.cs" />
+    <Compile Include="OfferManagement\Interfaces\IUcFindProduct.cs" />
+    <Compile Include="OfferManagement\Interfaces\IUcFindSpecial.cs" />
+    <Compile Include="OfferManagement\Interfaces\IUcManagerOffer.cs" />
+    <Compile Include="OfferManagement\Interfaces\IUcManagerProduct.cs" />
+    <Compile Include="OfferManagement\Interfaces\IUcManagerSpecial.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Salesmanagement\Implementation\SalesManagement.cs" />
+    <Compile Include="Salesmanagement\Implementation\UcChangeTable.cs" />
+    <Compile Include="Salesmanagement\Implementation\UcFindBill.cs" />
+    <Compile Include="Salesmanagement\Implementation\UcFindOrder.cs" />
+    <Compile Include="Salesmanagement\Implementation\UcFindOrderPosition.cs" />
+    <Compile Include="Salesmanagement\Implementation\UcManageBill.cs" />
+    <Compile Include="Salesmanagement\Implementation\UcManageOrder.cs" />
+    <Compile Include="Salesmanagement\Implementation\UcManageOrderPosition.cs" />
+    <Compile Include="Salesmanagement\Interfaces\ISalesManagement.cs" />
+    <Compile Include="Salesmanagement\Interfaces\IUcChangeTable.cs" />
+    <Compile Include="Salesmanagement\Interfaces\IUcFindBill.cs" />
+    <Compile Include="Salesmanagement\Interfaces\IUcFindOrder.cs" />
+    <Compile Include="Salesmanagement\Interfaces\IUcFindOrderPosition.cs" />
+    <Compile Include="Salesmanagement\Interfaces\IUcManageBill.cs" />
+    <Compile Include="Salesmanagement\Interfaces\IUcManageOrder.cs" />
+    <Compile Include="Salesmanagement\Interfaces\IUcManageOrderPosition.cs" />
+    <Compile Include="TableManagement\Implementation\TableManagement.cs" />
+    <Compile Include="TableManagement\Interfaces\ITableManagement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Oasp4Net.DataAccessLayer\Oasp4net.DataAccessLayer.csproj">
+      <Project>{1fb375ef-b1a5-4925-918f-a52cab4ff4b1}</Project>
+      <Name>Oasp4net.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Oasp4net.Infrastructure\Oasp4net.Infrastructure.csproj">
+      <Project>{2f7860b1-02d9-48c0-9cc9-b51687a46fdc}</Project>
+      <Name>Oasp4net.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
